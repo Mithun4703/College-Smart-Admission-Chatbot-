@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Management</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: "Segoe UI", Roboto, "Open Sans", sans-serif;
+            background-color: #f8f9fa;
+        }
+        main {
+            display: flex;
+            gap: 48px;
+        }
+        section {
+            padding: 2em;
+            width: 100%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #1979fa;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        .all {
+            max-height: 90vh;
+            overflow: auto;
+        }
+        .all ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            padding: 0;
+            list-style-type: none;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            padding: 1em 0;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 0.7em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #1979fa;
+            color: white;
+            padding: 0.7em;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        .delete-btn {
+            background: red;
+        }
+        li {
+            display: grid;
+            gap: 8px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            background: #fff;
+            transition: 0.3s ease-in-out;
+        }
+        li:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: auto;
+            text-align: center;
+            color: rgb(120, 120, 120);
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Management System</h1>
+    
+    <form method="GET" action="http://127.0.0.1:5000/students/" id="filterForm">
+        <label for="course">Filter by Course:</label>
+        <select name="course_name" id="course_filter">
+            <option value="">-- Select Course --</option>
+            {% for course in courses %}
+                <option value="{{ course.name }}" {% if request.args.get('course_name') == course.name %}selected{% endif %}>
+                    {{ course.name }}
+                </option>
+            {% endfor %}
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+
+    <main>
+        <section class="all">
+            <h2>All Students</h2>
+            <ul>
+                {% for student in students %}
+                <li>
+                    <p><strong>Name:</strong> {{ student.name }} - <strong>ID:</strong> {{ student.id }}</p>
+                    <p><strong>Course:</strong> {{ student.course.name if student.course else "No Course" }}</p>
+                    <p><strong>CGPA:</strong> {{ student.cgpa }}</p>
+                    
+                    <button>
+                        <a href="http://127.0.0.1:5000/students/update/{{ student.id }}/">Update</a>
+                    </button>
+
+                    <form action="http://127.0.0.1:5000/students/delete/{{ student.id }}/" method="post" onsubmit="return confirm('Are you sure you want to delete this student?');">
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section>
+            <h2>Add New Student</h2>
+            <form action="http://127.0.0.1:5000/students/" method="post" id="studentForm">
+                
+                <div>
+                    <label for="id">Student ID</label>
+                    <input type="number" name="id" placeholder="Enter Student ID" value="{{ request.form.get('id', '') }}" required />
+                </div>
+
+                <div>
+                    <label for="name">Student Name</label>
+                    <input type="text" name="name" placeholder="Enter Student Name" value="{{ request.form.get('name', '') }}" required />
+                </div>
+
+                <div>
+                    <label for="course">Select Course</label>
+                    <select name="course_id" id="course_id" required>
+                        <option value="">-- Select Course --</option>
+                        {% for o in courses %}
+                        <option value="{{ o.course_id }}" {% if request.form.get('course_id') == o.course_id|string %} selected {% endif %}>
+                            {{ o.name }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Student Management System</p>
+    </footer>
+
+    <script>
+      document.getElementById("filterForm").addEventListener("submit", function(event) {
+          let selectedCourse = document.getElementById("course_filter").value.trim();
+          console.log("🔥 Debug: Selected Course for Filtering:", selectedCourse);
+      });
+
+      document.getElementById("studentForm").addEventListener("submit", function(event) {
+          let courseSelect = document.getElementById("course_id");
+          let selectedValue = courseSelect.options[courseSelect.selectedIndex].value.trim(); 
+
+          console.log("🔥 Debug: Selected Course ID:", selectedValue);  
+
+          if (!selectedValue || selectedValue === "") {
+              alert("❌ Please select a course!");
+              event.preventDefault();
+          } else {
+              console.log("✅ Form Submitted! Selected Course ID:", selectedValue);
+          }
+      });
+
+      window.onload = function() {
+          let courseDropdown = document.getElementById("course_id");
+          for (let i = 0; i < courseDropdown.options.length; i++) {
+              console.log("🔥 Available Course Option:", courseDropdown.options[i].value, "-", courseDropdown.options[i].text);
+          }
+      };
+    </script>
+
+</body>
+</html>

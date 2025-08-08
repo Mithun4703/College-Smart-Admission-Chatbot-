@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 40px;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+        }
+        .table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-back {
+            background-color: #6c757d;
+            color: white;
+        }
+        .btn-download {
+            background-color: #28a745;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-center">
+            Admission Details - {{ record.full_name }}
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <td>{{ record.id }}</td>
+                    </tr>
+                    <tr>
+                        <th>Full Name</th>
+                        <td>{{ record.full_name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date of Birth</th>
+                        <td>{{ record.dob }}</td>
+                    </tr>
+                    <tr>
+                        <th>Gender</th>
+                        <td>{{ record.gender }}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>{{ record.email }}</td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td>{{ record.phone }}</td>
+                    </tr>
+                    <tr>
+                        <th>Permanent Address</th>
+                        <td>{{ record.permanent_address }}</td>
+                    </tr>
+                    <tr>
+                        <th>Current Address</th>
+                        <td>{{ record.current_address }}</td>
+                    </tr>
+                    <tr>
+                        <th>City</th>
+                        <td>{{ record.city }}</td>
+                    </tr>
+                    <tr>
+                        <th>State</th>
+                        <td>{{ record.state }}</td>
+                    </tr>
+                    <tr>
+                        <th>Pincode</th>
+                        <td>{{ record.pincode }}</td>
+                    </tr>
+                    <tr>
+                        <th>Qualification</th>
+                        <td>{{ record.qualification }}</td>
+                    </tr>
+                    <tr>
+                        <th>Percentage/CGPA</th>
+                        <td>{{ record.cgpa }}</td>
+                    </tr>
+                    <tr>
+                        <th>School/College</th>
+                        <td>{{ record.school_college }}</td>
+                    </tr>
+                    <tr>
+                        <th>Board/University</th>
+                        <td>{{ record.board_university }}</td>
+                    </tr>
+                    <tr>
+                        <th>Selected Course</th>
+                        <td>{{ course_name }}</td>  <!-- Use course_name from the Flask route -->
+                    </tr>                    
+                    <tr>
+                        <th>Mode of Study</th>
+                        <td>{{ record.mode }}</td>
+                    </tr>
+                    <tr>
+                        <th>Father's Name</th>
+                        <td>{{ record.father_name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Mother's Name</th>
+                        <td>{{ record.mother_name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Guardian Contact</th>
+                        <td>{{ record.guardian_contact }}</td>
+                    </tr>
+                    <tr>
+                        <th>Marksheet</th>
+                        <td>
+                            {% if record.marksheet %}
+                                <a href="{{ url_for('download_file', filename=record.marksheet) }}" class="btn btn-sm btn-download">Download</a>
+                            {% else %}
+                                <span class="text-danger">Not Uploaded</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>ID Proof</th>
+                        <td>
+                            {% if record.id_proof %}
+                                <a href="{{ url_for('download_file', filename=record.id_proof) }}" class="btn btn-sm btn-download">Download</a>
+                            {% else %}
+                                <span class="text-danger">Not Uploaded</span>
+                            {% endif %}
+                        </td>
+                    </tr>         
+                </tbody>
+            </table>
+            <div class="text-center">
+                <a href="{{ url_for('view_admissions') }}" class="btn btn-back">Back to Admissions</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

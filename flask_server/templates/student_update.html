@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Student</title> 
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        gap: 48px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      section {
+        padding: 2em;
+        width: 50%;
+        background: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+      label {
+        font-weight: bold;
+      }
+      input, select {
+        width: 100%;
+        padding: 0.5em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+        background: #1979fa;
+        color: white;
+        padding: 0.7em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #155bc1;
+      }
+      footer {
+        margin-top: auto;
+        color: rgb(205, 205, 205);
+        text-align: center;
+        padding-top: 1em;
+      }
+    </style>
+</head>
+<body>
+
+<section>
+  <h2>Update Student Details</h2>
+  <form action="http://127.0.0.1:5000/students/update/{{ student.id }}/" method="post">
+    
+    <!-- Student ID (Read-only) -->
+    <div>
+      <label for="id">Student ID</label>
+      <br>
+      <input type="number" id="id" name="id" value="{{ student.id }}" readonly>
+    </div>
+
+    <!-- Student Name -->
+    <div>
+      <label for="name">Name</label>
+      <br>
+      <input type="text" id="name" name="name" value="{{ student.name }}" required>
+    </div>
+
+    <!-- Course Selection -->
+    <div>
+      <label for="course_id">Course</label>
+      <br>
+      <select id="course_id" name="course_id" required>
+        <option value="" disabled>Select a Course</option>
+        {% for course in courses %}
+        <option value="{{ course.course_id }}" {% if course.course_id == student.course_id %} selected {% endif %}>
+            {{ course.name }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <!-- CGPA Input -->
+    <div>
+      <label for="cgpa">CGPA</label>
+      <br>
+      <input type="number" id="cgpa" step="0.01" min="0" max="10" name="cgpa" value="{{ student.cgpa }}" required>
+    </div>
+
+    <button type="submit">Update</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 College Enquiry Chatbot
+</footer>
+
+<script>
+  // Debugging: Ensure selected value is correct
+  document.addEventListener("DOMContentLoaded", function () {
+    let courseSelect = document.querySelector("#course_id");
+    console.log("🔥 Selected Course ID:", courseSelect.value);
+  });
+</script>
+
+</body>
+</html>

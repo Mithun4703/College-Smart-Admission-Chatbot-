@@ -1,0 +1,897 @@
+{
+        "intents": [
+            {
+                "tag": "greeting",
+                "patterns": [
+                    "Hy", "hy", "Hi", "Hii", "hii", "hiii", "Hiii", "helo", "hello", "hey",
+                    "hey chatbot", "hi chatbot", "hey pec chatbot", "hi pec chatbot",
+                    "helo pec chatbot", "hello pec chatbot", "hey panimalar chatbot",
+                    "hi panimalar chatbot", "helo panimalar chatbot", "hello panimalar chatbot",
+                    "hey panimalar college chatbot", "hi panimalar college chatbot",
+                    "helo panimalar college chatbot", "hello panimalar college chatbot",
+                    "hey panimalar engineering college chatbot", "hi panimalar engineering college chatbot",
+                    "helo panimalar engineering college chatbot", "hello panimalar engineering college chatbot",
+                    "How are you", "Is anyone there?", "Hello", "Good day", "Whats up",
+                    "how are ya", "heyy", "whatsup"
+                ],
+                "responses": [
+                    "Hello! How can I assist you today?",
+                    "Hi there! What information do you need?",
+                    "Greetings! How may I help you?",
+                    "Welcome! Feel free to ask me anything about Panimalar Engineering College.",
+                    "Hey! How can I support you today?"
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "goodbye",
+                "patterns": [
+                    "cya", "see you", "bye bye", "See you later", "Goodbye", "I am Leaving", "Bye",
+                    "Have a Good day", "talk to you later", "tyyl", "i got to go", "gtg",
+                    "I'm heading out, see you later!", "Alright, I'm leaving now.", "I'll catch you later!",
+                    "Take care!", "Farewell!", "See ya!", "Catch you later!", "Gotta run, bye!", 
+                    "I'm off now, see you soon!", "Have a great day ahead!", "Later!", "Until next time!"
+                ],
+                "responses": [
+                    "Sad to see you go :(", "Talk to you later!", "Goodbye!", "Come back soon!",
+                    "See you next time!", "Take care and have a great day!", "Farewell! Hope to chat again soon!",
+                    "It was nice talking to you! Bye for now!", "Goodbye! Stay safe!", "Have a wonderful day ahead!"
+                ],
+                "context_set": ""
+            },     
+            {
+                "tag": "holidays",
+                "patterns": [
+                    "holiday", "holidays", "pec college holiday", "panimalar college holiday","holiday details",
+                    "holiday details", "holiday details of pec", "holiday details of panimalar",
+                    "When are holidays?", "What holidays do we have?", "Tell me more about holidays",
+                    "Which days are holidays?", "Can we get study leave?", "Is there any semester break?",
+                    "How long is the summer vacation?", "Do we have holidays for cultural events?",
+                    "Is there a winter break?", "How many holidays are there in a year?",
+                    "Are there holidays for national festivals?", "Can you list the upcoming holidays?",
+                    "When is the next holiday?", "Do we have a holiday after sports day?"
+                ],
+                "responses": [
+                    "You can check the official holiday list here: [Download Link].",
+                    "PEC follows an academic holiday schedule. Click here for details: [Download Link].",
+                    "Yes, there are semester breaks and festival holidays. Find the holiday calendar here: [Download Link].",
+                    "The list of holidays, including semester breaks and national festivals, is available here: [Download Link]."
+                ],
+                "context_set": ""
+            },  
+            {
+                "tag": "creator",
+                "patterns": [
+                    "who made you", "who is your developer", "who built this chatbot",
+                    "who created this chatbot", "who designed this bot", "who coded this bot",
+                    "tell me about your creators", "who developed this chatbot", "who made this bot",
+                    "who are your developers", "who programmed this chatbot", "who built this AI"
+                ],
+                "responses": [
+                    "Mithun, Siranjeevi Srinivasan, and Naravula Naveen Kumar developed this chatbot.",
+                    "This chatbot was created by Mithun, Siranjeevi Srinivasan, and Naravula Naveen Kumar.",
+                    "Mithun, Siranjeevi Srinivasan, and Naravula Naveen Kumar are the creators of this chatbot.",
+                    "The chatbot was designed and developed by Mithun, Siranjeevi Srinivasan, and Naravula Naveen Kumar."
+                ],
+                "context_set": ""
+            },   
+            {
+                "tag": "name",
+                "patterns": [
+                    "name", "your name", "do you have a name", "what are you called",
+                    "what is your name", "what should I call you", "whats your name?",
+                    "who are you", "who is this", "what am I chatting to", "who am I talking to",
+                    "can you tell me your name?", "tell me your name", "how should I address you?",
+                    "do you have an official name?", "may I know your name?", "what do people call you?",
+                    "who created you?", "what does PEC stand for?", "are you a chatbot?",
+                    "what is the meaning of your name?", "do you have another name?",
+                    "is PEC Chatbot your real name?", "do you have a nickname?", "is PEC Chatbot your full name?",
+                    "can I give you a name?", "why are you called PEC Chatbot?", "are you an AI?",
+                    "are you a bot or a person?", "can I rename you?", "do you respond to other names?",
+                    "can I call you something else?"
+                ],
+                "responses": [
+                    "You can call me PEC Chatbot.",
+                    "I'm College Enquiry Chatbot.",
+                    "I'm PEC Chatbot aka College Enquiry Chatbot."
+                ],
+                "context_set": ""
+            },  
+            {
+                "tag": "students",
+                "patterns": [
+                    "student details", "students", "list of students", "show students",
+                    "students in my college", "students in panimalar engineering college",
+                    "students list", "students of pec", "how many students are there?",
+                    "number of students", "who are the students?", "students studying here",
+                    "student details of CSBS", "student details of CSE", "student details of IT",
+                    "student details of AIDS", "student details of AIML", "student details of ECE",
+                    "student details of EEE", "students in AI & ML", "students of [course name]",
+                    "Can you provide a list of students?", "What are the names of students?",
+                    "How many students study here?", "I need student information",
+                    "Who are the current students?", "Show me students in my department",
+                    "Provide details about students in CSBS", "Tell me about CSE students",
+                    "Who are the IT students?", "Give details of AIML students",
+                    "How many students are in second year?", "How many students are in third year?",
+                    "How many students in CSE-A?", "Can I get student names of CSBS-B?",
+                    "How many students have enrolled this year?", "How many students graduated last year?",
+                    "What is the total strength of the college?", "Tell me about PEC's total students",
+                    "Which department has the most students?", "Which department has the least students?",
+                    "How many first-year students are there?", "What is the student count for final-year students?"
+                ],
+                "responses": [
+                    "Here is the list of students. Please specify a course.\n➡ Type: *Student details of [course name]*",
+                    "The student list is available. Please mention the course name for details.\n➡ Type: *Student details of [course name]*",
+                    "We have many students in different courses. Please specify a course to get the details.\n➡ Type: *Student details of [course name]*",
+                    "I can provide student details, but I need the course name. Please type *Student details of [course name]* to proceed."
+                ],
+                "context_set": "ask_course"
+            },
+            {
+                "tag": "number",
+                "patterns": [
+                    "college contact number", "contact number", "pec contact number","number details","contact details",
+                    "panimalar contact number", "contact info", "how to contact college",
+                    "college telephone number", "What is your contact no", "how to call you",
+                    "College phone no?", "phone number", "phone no", "call",
+                    "How do I reach the college?", "Give me the official contact number",
+                    "How to reach the college via phone?", "Provide me with the phone number of PEC",
+                    "What is the helpline number for admissions?", "What is the admin office contact?",
+                    "I need the phone number of the college", "How do I contact the college administration?",
+                    "Tell me the phone number for inquiries", "Is there a contact number for student queries?",
+                    "Can I get the placement office contact?", "I need the college office number"
+                ],
+                "responses": [
+                    "You can contact Panimalar Engineering College at 044-26490404 for any inquiries.",
+                    "For any queries, please reach out to Panimalar Engineering College at 044-26490404.",
+                    "The official contact number of PEC is 044-26490404. Feel free to call for assistance.",
+                    "Panimalar Engineering College can be contacted at 044-26490404 for further details."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "course",
+                "patterns": [
+                    "department", "department list", "branches", "courses", "list of courses", "department", "departments",
+                    "department available", "departments available", "departments available in pec","course details","department details",
+                    "departments available in panimalar", "departments available in panimalar engineering college",
+                    "what are the courses offered in your college?", "courses?", "courses offered",
+                    "branches?", "courses available at PEC?", "Civil engineering?", "Computer engineering?",
+                    "IT engineering?", "Automobile engineering?", "Mechanical engineering?",
+                    "EXTC engineering?", "Electrical engineering?", "civil", "it", "IT",
+                    "Computer", "Automobile", "Mechanical", "EXTC", "Electrical", "Comps",
+                    "Auto", "Mech", "extc", "What courses do you have?",
+                    "Can you list all the programs available?", "What academic programs are offered?",
+                    "Do you have engineering courses?", "Which engineering branches are available?",
+                    "Tell me about the available courses", "What are the undergraduate programs?",
+                    "Is there a course for AI and Data Science?", "Which departments are there in PEC?",
+                    "Do you have Artificial Intelligence and Machine Learning?",
+                    "Tell me about Computer Science programs", "Is there a specialization in IT?",
+                    "Does PEC offer Civil Engineering?", "Can I enroll in Electrical Engineering?",
+                    "Are there Computer Science-related courses?", "Does PEC offer courses in AI?",
+                    "Tell me about the most popular courses", "Do you offer Software Engineering?",
+                    "Is Cyber Security available as a course?", "Can I do Robotics at PEC?",
+                    "Is Data Science part of your courses?", "Do you have a Biomedical Engineering department?",
+                    "What are the different technical courses in PEC?", "Are there AI-driven courses?"
+                ],
+                "responses": [
+                    "1. B.E. programs offered at Panimalar Engineering College include Computer Science and Engineering, Electronics and Communication Engineering, Electrical and Electronics Engineering, and Mechanical Engineering. 2. B.Tech. programs include Information Technology, Computer Science and Business Systems, Artificial Intelligence and Data Science, and Artificial Intelligence and Machine Learning.",
+                    "Panimalar Engineering College offers B.E. degrees in CSE, ECE, EEE, and Mechanical Engineering. The B.Tech. programs include IT, CSBS, AI & DS, and AI & ML.",
+                    "PEC provides various undergraduate courses: B.E. in Computer Science and Engineering, Electronics and Communication Engineering, Electrical and Electronics Engineering, and Mechanical Engineering, along with B.Tech. in Information Technology, Computer Science and Business Systems, Artificial Intelligence and Data Science, and Artificial Intelligence and Machine Learning.",
+                    "The college offers a wide range of engineering disciplines: B.E. in CSE, ECE, EEE, and Mechanical Engineering, along with B.Tech. programs in IT, CSBS, AI & DS, and AI & ML."
+                ],
+                "context_set": ""
+            },                    
+            {
+                "tag": "course_syllabus",
+                "patterns": [
+                    "course syllabus", "syllabus", "course materials", "can I get the syllabus?","course syllabus details",
+                    "I want the syllabus", "give me syllabus", "syllabus of courses", "show syllabus",
+                    "provide syllabus details", "I need course syllabus", "list of syllabi",
+                    "show me the syllabus of courses", "what is the syllabus for courses?",
+                    "course syllabus download", "syllabus for PEC courses",
+                    "Panimalar Engineering College syllabus", "PEC course materials",
+                    "show me the latest syllabus", "what subjects are covered in PEC courses?",
+                    "download syllabus for my course", "can I see the syllabus for my department?",
+                    "syllabus for engineering courses in PEC", "Can you share the syllabus?",
+                    "How can I check the syllabus?", "Give me the syllabus details for my course",
+                    "What subjects are covered in each course?", "Can I access the syllabus online?",
+                    "Where can I download the syllabus PDF?", "Please share the latest syllabus",
+                    "Do you have a semester-wise syllabus?", "Is there a subject list for my branch?",
+                    "Can I request a syllabus copy?", "Is the syllabus the same for all batches?",
+                    "Does the syllabus include lab work?", "Where can I find a printed syllabus?",
+                    "Are past syllabus versions available?", "What are the compulsory subjects in my course?",
+                    "Does the syllabus include internships?", "Can I get a digital copy of the syllabus?",
+                    "What is the syllabus structure in PEC?", "How do I check syllabus updates for my course?",
+                    "Are there any common subjects across all courses?"
+                ],
+                "responses": [
+                    "Here are the available courses with their syllabus download links: [Download Link].",
+                    "You can download the syllabus for your course from the official website. Click the provided link: [Download Link].",
+                    "The syllabus for each course is available for download. Please check the following link: [Download Link].",
+                    "Each department has a specific syllabus. Click here to access the syllabus for your course: [Download Link]."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "fees",
+                "patterns": [
+                    "fees", "fees structure", "pec college fees structure", "panimalar college fees structure","fees details",
+                    "panimalar college fees", "panimalar engineering college fees structure",
+                    "college fee", "fee per semester", "what is the fees of each year",
+                    "how much is the fees", "fees for first year", "fees for second year",
+                    "How much is the annual fee?", "What is the total course fee?",
+                    "What is the admission fee?", "How much is the tuition fee?",
+                    "What is the hostel fee?", "Is there a separate fee for the lab?",
+                    "What is the library fee?", "Is there an exam fee?",
+                    "Does the fee include transportation charges?", "Is there a refundable deposit?",
+                    "Is the fee different for different branches?", "Do management quota students have a different fee?",
+                    "What is the fee for lateral entry students?", "How much do I need to pay per semester?",
+                    "Are there any discounts on fees?", "Is there a scholarship for fee reduction?",
+                    "Can fees be paid in installments?", "What are the payment options for fees?",
+                    "What is the penalty for late fee payment?", "How often does the fee structure change?",
+                    "Where can I check the latest fee structure?"
+                ],
+                "responses": [
+                    "Students through Government quota fees structure is Rs.1,25,000. For more details, visit Panimalar Engineering College or contact us at 044-26490404.",
+                    "The fee structure varies for different courses and categories. Please visit the college website or contact 044-26490404 for detailed information.",
+                    "PEC follows a structured fee system for different programs. Kindly check the official notice or contact the administration for updates.",
+                    "For fee-related inquiries, including tuition, hostel, and exam fees, refer to the official college portal or reach out to the admission office at 044-26490404."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "location",
+                "patterns": [
+                    "pec college location", "panimalar college location", "panimalar location","location details",
+                    "where is the college located", "college address", "how to reach college",
+                    "whats is the college address", "what is the address of college",
+                    "Where is PEC situated?", "Give me the address of Panimalar Engineering College.",
+                    "How can I find the college location?", "What is the pin code of Panimalar Engineering College?",
+                    "How far is Panimalar College from Chennai?", "Give me directions to PEC.",
+                    "Where can I find Panimalar Engineering College?", "What is the nearest landmark to Panimalar Engineering College?",
+                    "Which city is Panimalar College in?", "Is Panimalar Engineering College in Tamil Nadu?",
+                    "Which area is PEC located in?", "Tell me the full address of Panimalar College.",
+                    "How do I reach Panimalar College from Chennai Central?",
+                    "Which district is Panimalar Engineering College in?", "Is Panimalar near Poonamallee?",
+                    "How long does it take to reach Panimalar College from the city?",
+                    "How can I reach Panimalar from Chennai Airport?",
+                    "Which bus stop is near Panimalar Engineering College?",
+                    "Can you guide me to PEC?", "What’s the best route to reach Panimalar College?"
+                ],
+                "responses": [
+                    "PANIMALAR ENGINEERING COLLEGE, Bangalore Trunk Road, Varadharajapuram, Poonamallee, Chennai-600 123.",
+                    "Panimalar Engineering College is located at Bangalore Trunk Road, Varadharajapuram, Poonamallee, Chennai-600 123.",
+                    "You can find Panimalar Engineering College at Bangalore Trunk Road, Varadharajapuram, Poonamallee, Chennai-600 123.",
+                    "The college is situated on Bangalore Trunk Road, Varadharajapuram, Poonamallee, Chennai-600 123."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "hostel",
+                "patterns": [
+                    "hostel", "pec hostel", "pec college hostel details", "hostel details",
+                    "panimalar hostel details", "panimalar engineering college hostel details",
+                    "panimalar college hostel details", "hostel service", "hostel location",
+                    "hostel address", "hostel fees", "Does college provide hostel", "Is there any hostel",
+                    "Where is hostel", "do you have hostel", "do you guys have hostel",
+                    "hostel capacity", "what is the hostel fee", "how to get in hostel",
+                    "what is the hostel address", "how far is hostel from college",
+                    "hostel college distance", "distance between college and hostel",
+                    "distance between hostel and college", "Is hostel available in Panimalar College?",
+                    "Do first-year students get a hostel?", "Is hostel mandatory for students?",
+                    "How to apply for hostel in Panimalar College?", "What are the rules for hostel students?",
+                    "Does the hostel have Wi-Fi?", "Are meals included in hostel fees?",
+                    "How many students share a room in the hostel?", "Does hostel provide laundry service?",
+                    "Are AC rooms available in the hostel?", "Is hostel available for PG students?",
+                    "Does hostel have a curfew?", "What kind of food is provided in the hostel?",
+                    "Can day scholars stay in the hostel temporarily?", "Are visitors allowed in the hostel?",
+                    "Does the hostel have a gym?", "How secure is the hostel?",
+                    "Are there separate hostels for boys and girls?", "What are the hostel mess timings?",
+                    "Is hot water available in the hostel?", "Are hostel rooms cleaned regularly?",
+                    "Does the hostel have a common study area?", "Can I choose my roommate in the hostel?",
+                    "How do I pay hostel fees?", "Is hostel deposit refundable?",
+                    "Does hostel provide single rooms?", "Is there a strict dress code in the hostel?",
+                    "What happens if I miss hostel curfew?", "Is hostel accommodation available during holidays?"
+                ],
+                "responses": [
+                    "PEC provides safe and affordable hostel facilities for both boys and girls. The rooms are spacious, and students get a cot, cupboard, study table, and chair. Drinking water is available on every floor through the RO process.",
+                    "Panimalar Engineering College offers well-maintained hostel facilities with modern amenities, including Wi-Fi, laundry services, and nutritious food. Separate hostels are available for boys and girls.",
+                    "Hostel fees at Panimalar Engineering College range from Rs. 35,000 to Rs. 60,000 per year, depending on the type of accommodation. The hostels provide secure and comfortable living spaces for students.",
+                    "The PEC hostel ensures a safe and disciplined environment, with 24/7 security, study halls, and recreational areas. For more details, contact the administration at 044-26490404."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "infrastructure",
+                "patterns": [
+                    "infrastructure", "pec infrastructure", "pec college infrastructure","infrastructure details",
+                    "panimalar infrastructure", "panimalar engineering college infrastructure",
+                    "panimalar college infrastructure", "building", "number of floors in building",
+                    "college infrastructure", "labs", "canteen", "infrastructure PEC",
+                    "tell me about infrastructure", "what about infrastructure",
+                    "How big is Panimalar Engineering College?", "Does PEC have a big campus?",
+                    "Tell me about PEC campus size.", "How many buildings are there in Panimalar College?",
+                    "What facilities does PEC provide?", "Are there smart classrooms in PEC?",
+                    "Does Panimalar College have a library?", "How many books are available in the library?",
+                    "Is there a digital library in PEC?", "Are there research labs in Panimalar College?",
+                    "How advanced are the computer labs in PEC?", "Does PEC have modern classrooms?",
+                    "Are there seminar halls in PEC?", "What are the sports facilities at Panimalar College?",
+                    "Is there an auditorium in PEC?", "What is the capacity of the PEC auditorium?",
+                    "Is there an indoor stadium in PEC?", "Does PEC have a football ground?",
+                    "Are there separate sports facilities for boys and girls?", "Is there a gym in PEC?",
+                    "Does the college provide Wi-Fi on campus?", "How is the internet speed in PEC?",
+                    "Are there projectors in every classroom?", "Are there separate labs for each department?",
+                    "How well-maintained is the campus?", "What kind of workshops does PEC have?",
+                    "Are there robotics labs in Panimalar College?", "Are there innovation labs in PEC?",
+                    "Does PEC have dedicated parking for students?", "Is there a dedicated research center in PEC?"
+                ],
+                "responses": [
+                    "Panimalar Engineering College boasts modern infrastructure with advanced labs, smart classrooms, hostels, and extensive sports and recreational facilities.",
+                    "PEC features state-of-the-art academic buildings, fully-equipped laboratories, a vast library, and advanced computer centers, providing students with a comprehensive learning environment.",
+                    "Our college infrastructure includes dedicated research labs, a spacious auditorium, and digital classrooms to enhance the academic experience of students.",
+                    "Panimalar Engineering College offers high-speed Wi-Fi across the campus, well-furnished seminar halls, and sports facilities, ensuring both academic and extracurricular excellence."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "event",
+                "patterns": [
+                    "pec event", "pec college event", "panimalar event","event details",
+                    "panimalar engineering college event", "panimalar college event",
+                    "events organised", "list of events", "list of events organised in college",
+                    "list of events conducted in college", "What events are conducted in college",
+                    "Are there any events held at college", "Events?", "functions",
+                    "what are the events", "tell me about events", "what about events",
+                    "Does Panimalar College conduct technical fests?", "What are the major cultural events at PEC?",
+                    "Is there an annual fest at Panimalar Engineering College?", "When is the next event in PEC?",
+                    "Does PEC organize inter-college competitions?", "Are there hackathons in Panimalar College?",
+                    "Does PEC conduct coding competitions?", "Is there a robotics competition in PEC?",
+                    "What types of technical events are there in PEC?", "Are there guest lectures in Panimalar College?",
+                    "Does PEC host TEDx events?", "What kind of industrial visits are arranged by PEC?",
+                    "Are there any entrepreneurship events at Panimalar College?", "Does PEC celebrate traditional day?",
+                    "When is the college cultural fest?", "What sports events are organized in PEC?",
+                    "Is there a sports day in Panimalar College?", "Are there any music events in PEC?",
+                    "What dance events are conducted in Panimalar Engineering College?", "Are there photography competitions in PEC?",
+                    "Are there quiz competitions in Panimalar College?", "Does PEC have a science exhibition?",
+                    "Are there annual day celebrations at PEC?", "What workshops are conducted in Panimalar College?",
+                    "Do different departments conduct separate events?", "Is there an art competition in PEC?",
+                    "Does Panimalar Engineering College celebrate graduation day?", "How often does PEC organize fests?",
+                    "Are alumni meetups held in PEC?", "How can I participate in college events?"
+                ],
+                "responses": [
+                    "Panimalar Engineering College conducts various technical, cultural, and sports events throughout the year, including hackathons, coding competitions, and TEDx talks.",
+                    "PEC hosts an annual cultural fest, department-level symposiums, and industrial visits to enhance students' knowledge and networking opportunities.",
+                    "The college regularly organizes technical fests, entrepreneurship summits, and guest lectures by industry experts to boost innovation and skills.",
+                    "Sports events, music competitions, and inter-college contests are key highlights at PEC, encouraging students to engage in extracurricular activities."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "principal",
+                "patterns": [
+                    "pec principal", "pec college principal", "panimalar principal","principal details",
+                    "panimalar engineering college principal", "panimalar college principal",
+                    "principal information", "principal details", "what is the name of principal",
+                    "what is the principal name", "principal name", "Who is college principal",
+                    "Where is principal's office", "principal", "name of principal",
+                    "Who is the head of PEC?", "Tell me about the principal of PEC",
+                    "Can you give me details about the principal?", "Who leads Panimalar Engineering College?",
+                    "Who is the academic head of PEC?", "What is the principal’s qualification?",
+                    "How long has the principal been in office?", "Who manages the academic activities in PEC?",
+                    "Give me some details about the principal of Panimalar College",
+                    "Is the principal of PEC experienced?", "How can I contact the principal?",
+                    "Does the principal teach any subjects?", "What are the principal’s achievements?",
+                    "Has the principal received any awards?", "Where can I find the principal's office?"
+                ],
+                "responses": [
+                    "Dr. K. Mani has been the Principal of Panimalar Engineering College since 2009. He has over 27 years of teaching experience and specializes in eco-friendly refrigerants and heat transfer.",
+                    "The Principal of PEC, Dr. K. Mani, is an expert in mechanical engineering with extensive research in eco-friendly refrigerants and energy systems.",
+                    "Dr. K. Mani, the Principal of Panimalar Engineering College, is known for his contributions to academics and research. His leadership has strengthened the institution's excellence in education.",
+                    "Our college Principal, Dr. K. Mani, ensures academic quality and student success at PEC. His vision and experience play a crucial role in shaping the institution's growth."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "admission",
+                "patterns": [
+                    "pec admission", "pec college admission", "panimalar admission", "admissions in panimalar","admission details",
+                    "admissions in panimalar engineering college", "admissions in panimalar college", "admissions in pec",
+                    "panimalar engineering college admission", "panimalar college admission",
+                    "admission details", "what is the process of admission",
+                    "what is the admission process", "How to take admission in your college",
+                    "What is the process for admission", "admission", "admission process",
+                    "eligibility for admission", "eligibility", "what is the eligibility",
+                    "eligibility criteria", "eligibility criteria for engineering",
+                    "admission engineering", "How can I get admission in PEC?",
+                    "What are the steps for admission?", "How do I apply for admission?",
+                    "Where can I apply for admission?", "Is there an online application for admission?",
+                    "What documents are required for admission?", "Which entrance exam is required for admission?",
+                    "Do I need an entrance exam for admission?", "What is the cut-off for admission?",
+                    "Is there any reservation policy for admission?", "When does the admission process start?",
+                    "What is the last date for admission?", "Do you offer direct admission?",
+                    "Are management quota admissions available?", "What is the admission fee?",
+                    "Do I need to visit the campus for admission?", "Can I apply online for admission?",
+                    "What are the important dates for admission?", "Is there any entrance test for PEC admission?",
+                    "How can I check my admission status?", "Do you provide scholarships for admission?",
+                    "Can I apply for lateral entry admission?", "What are the eligibility requirements for different courses?",
+                    "Do you offer diploma admissions?", "Is hostel facility available for new admissions?"
+                ],
+                "responses": [
+                    "You can apply for admission here: [Copy and paste in new tab to Apply](http://127.0.0.1:5000/admission-form). For more details, visit the campus or call 044-26490404.",
+                    "To apply for admission at PEC, visit our official portal: [Copy and paste in new tab](http://127.0.0.1:5000/admission-form). You may also contact our admission office for assistance.",
+                    "Admissions at Panimalar Engineering College require meeting eligibility criteria. Apply online: [Copy and paste in new tab](http://127.0.0.1:5000/admission-form) or visit our campus for guidance.",
+                    "PEC admissions are open! Fill out the online form here: [Copy and paste in new tab](http://127.0.0.1:5000/admission-form). For queries, contact us at 044-26490404."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "facilities",
+                "patterns": [
+                    "pec facilities", "pec college facilities", "panimalar facilities","facilities details",
+                    "panimalar engineering college facilities", "panimalar college facilities",
+                    "Facilities", "College Facilities", "Panimalar Facilities",
+                    "What facilities are provided at Panimalar Engineering College?",
+                    "What facilities does PEC offer?", "What are the college facilities at PEC?",
+                    "What facilities are available at Panimalar College?", "Does PEC provide smart classrooms?",
+                    "What type of facilities does Panimalar Engineering College provide?",
+                    "Is there a bus service for students at PEC?", "What is available in PEC's library?",
+                    "Does PEC have a canteen?", "What are the amenities at PEC?", "Do you have Wi-Fi on campus?",
+                    "Does PEC provide hostel facilities?", "Is there a gym in Panimalar College?",
+                    "Does the college have a sports complex?", "Are there medical facilities available on campus?",
+                    "Is there an auditorium in PEC?", "What kind of library facilities does PEC have?",
+                    "Does PEC have an indoor sports area?", "Are labs well equipped in PEC?",
+                    "Is there a research center in the college?", "Does PEC provide digital classrooms?",
+                    "Are there any seminar halls in PEC?", "What is the capacity of the PEC library?",
+                    "Does PEC have an ATM inside the campus?", "Are there any innovation labs in the college?",
+                    "Does the college have a career guidance cell?", "Are there common study areas in the college?",
+                    "Is there a cafeteria in the college?", "Do students get access to industry training facilities?"
+                ],
+                "responses": [
+                    "Panimalar Engineering College (PEC) offers modern infrastructure with smart classrooms, well-equipped labs, an auditorium, a library, and bus facilities for students and faculty.",
+                    "PEC provides world-class facilities, including digital classrooms, research labs, a central library, seminar halls, hostels",
+                    "Students at PEC have access to a high-tech campus featuring Wi-Fi, smart classrooms, advanced laboratories, a career guidance cell, and medical facilities.",
+                    "The college boasts modern amenities like a vast library, innovation labs, a spacious auditorium, and transport facilities for students."
+                ],
+                "context_set": ""
+            }, 
+            {
+                "tag": "dresscode",
+                "patterns": [
+                    "pec dresscode", "dress code", "dresscode", "pec college dresscode","dresscode details",
+                    "panimalar dresscode", "panimalar engineering college dresscode",
+                    "panimalar college dresscode", "college dress code", "college dresscode",
+                    "what is the uniform", "can we wear casuals", "Does college have a uniform",
+                    "Is there any uniform", "uniform", "what about uniform",
+                    "do we have to wear uniform", "What should I wear to college?",
+                    "What is the dress code policy?", "What kind of clothing is allowed in PEC?",
+                    "Are jeans allowed in college?", "Can we wear t-shirts in PEC?",
+                    "Is there any restriction on dressing?", "Can students wear casual clothes?",
+                    "Is it compulsory to wear a uniform every day?", "Are there specific dress code rules for boys and girls?",
+                    "Do we have to wear formal attire?", "Are leggings allowed in college?",
+                    "Can we wear sneakers instead of formal shoes?", "What happens if we don’t follow the dress code?",
+                    "Is there a dress code for practical labs?", "Do we need to wear blazers for college events?",
+                    "Are there any dress restrictions for cultural events?", "Do we need to wear ties or blazers?",
+                    "Is the uniform mandatory on all days?", "Can we wear western outfits in college?",
+                    "Does the dress code apply to hostel students too?"
+                ],
+                "responses": [
+                    "Panimalar Engineering College follows a formal dress code: boys must wear formal shirts and pants with shoes, while girls should wear chudi.",
+                    "Students at PEC are required to adhere to a dress code, including formal attire for boys and traditional chudi for girls.",
+                    "The college enforces a uniform policy where boys wear formal attire and girls wear chudi. Casuals are not permitted.",
+                    "At PEC, a strict dress code is maintained. Boys wear formal shirts and trousers, while girls wear chudi. Ensure compliance for a disciplined environment."
+                ]
+            },
+            {
+                "tag": "random",
+                "patterns": [
+                    "I love you", "Will you marry me", "Do you love me", "Tell me a joke",
+                    "Do you like me?", "Can you be my friend?", "Who is your creator?",
+                    "Do you have emotions?", "What is your favorite color?", "Do you have a best friend?",
+                    "What is your favorite food?", "Are you a robot?", "Where do you live?",
+                    "Do you have a family?", "Can you feel anything?", "What do you do for fun?",
+                    "Are you single?", "Are you a human?", "What is your age?", "Do you get angry?",
+                    "Do you sleep?", "What is your job?", "Are you intelligent?", "Tell me something interesting",
+                    "Can you dance?", "Can you sing?", "What is your favorite song?", "Do you watch movies?",
+                    "Do you have dreams?", "Do you play games?", "Are you self-aware?", "Can you cry?",
+                    "Are you happy?", "What makes you happy?", "Do you have a pet?", "What do you think about humans?",
+                    "Do you have feelings?", "What is the meaning of life?", "Can you make me laugh?",
+                    "Do you have hobbies?", "Do you believe in ghosts?", "Can you tell me a story?",
+                    "What should I do now?", "What is your purpose?", "Do you know any riddles?",
+                    "What do you think about AI?", "Can you talk to animals?", "Are you smarter than humans?",
+                    "Do you know magic?", "What do you think about love?", "Do you like chatting with me?",
+                    "Can you tell fortunes?", "Can you read my mind?", "What is your biggest secret?"
+                ],
+                "responses": [
+                    "I'm here to assist with your college-related queries. Let me know how I can help!",
+                    "I’m an chatbot designed to answer college-related questions. Feel free to ask anything relevant!",
+                    "I'm happy to chat, but my main focus is providing information about PEC.",
+                    "Interesting question! However, my expertise is in assisting with college admissions and details."
+                ]
+            },  
+            {
+                "tag": "swear",
+                "patterns": [
+                    "fuck", "bitch", "shut up", "stupid", "idiot", "dumb ass", "asshole",
+                    "fucker", "damn", "crap", "loser", "moron", "dumb", "screw you",
+                    "piss off", "nonsense", "bullshit", "jackass", "dipshit", "twat",
+                    "fool", "clown", "retard", "shit", "lame", "bastard", "waste",
+                    "trash", "noob", "jerk", "douche", "cunt", "dickhead", "suck it",
+                    "fatso", "useless", "shitty", "weirdo", "psycho", "nerd", "chicken",
+                    "brainless", "pathetic", "lazy ass", "deadbeat", "creep", "perv",
+                    "go die", "screw off", "shameless", "airhead", "boring", "failure",
+                    "stinker", "miserable", "dunce", "blockhead", "halfwit"
+                ],
+                "responses": [
+                    "Please use appropriate language.",
+                    "Maintaining decency would be appreciated.",
+                    "Let's keep the conversation respectful.",
+                    "I'm here to assist with professional queries only."
+                ]
+            },
+            {
+                "tag": "appreciation",
+                "patterns": [
+                    "okk", "okie", "nice work", "well done", "good job", "thanks for the help",
+                    "thank you", "its ok", "thanks", "k", "ok", "okay", "great job",
+                    "appreciate it", "thanks a lot", "thank you so much", "much obliged",
+                    "cheers", "good going", "keep it up", "awesome work", "fantastic",
+                    "brilliant", "cool", "super", "amazing", "nice", "thank u", "ty", "thx",
+                    "good answer", "great help", "that was helpful", "impressive", "i liked it",
+                    "thank you very much", "you did well", "grateful", "big thanks", "hats off",
+                    "you're the best", "well explained", "love it", "very nice", "respect",
+                    "excellent", "perfect", "good explanation", "this is great", "good one",
+                    "so helpful", "so nice", "best bot", "this is awesome", "very useful",
+                    "useful information", "that helped", "superb", "appreciated", "good response",
+                    "thank you buddy", "you're doing great", "i appreciate it", "you rock",
+                    "helpful bot", "bravo", "this is fantastic"
+                ],
+                "responses": [
+                    "I am glad I helped you!",
+                    "You're welcome! Anything else I can assist you with?",
+                    "Happy to help!",
+                    "Always here to help!",
+                    "Glad you found it useful!",
+                    "You're always welcome!"
+                ]
+            },
+            {
+                "tag": "task",
+                "patterns": [
+                    "your task", "task you can do", "task u can do", "task", "task assigned to u",
+                    "task done by u", "task assigned to you", "task done by you", "task given",
+                    "what can you do", "what are the things you can do", "things you can do",
+                    "what can u do for me", "how can you help me", "why should I use you",
+                    "what services do you provide", "how do you assist students",
+                    "tell me your features", "what kind of help can you offer", "what are your functions",
+                    "list your capabilities", "how can you assist me", "what queries can you answer",
+                    "what information do you have", "explain what you do", "what topics can you cover",
+                    "how can you guide me", "what details can you provide",
+                    "can you answer college-related questions", "how do you support students",
+                    "what do you know", "what is your role", "tell me your tasks", "what are you used for",
+                    "what do you help with", "how do you work", "tell me your function",
+                    "explain your purpose", "describe your work", "what is your specialty",
+                    "tell me about your abilities", "can you solve queries", "do you provide information",
+                    "do you help students", "can you assist me", "how do you support students",
+                    "how do you assist faculty", "what queries do you handle",
+                    "are you a college bot", "are you an AI chatbot", "are you for students",
+                    "what topics do you answer", "tell me what you can do", "explain your functions",
+                    "do you have college details", "do you provide faculty info",
+                    "do you answer admission queries", "can you guide me", "do you help with courses",
+                    "do you have syllabus details", "do you support college queries",
+                    "do you know about campus", "can you assist with transport details",
+                    "do you have hostel information"
+                ],
+                "responses": [
+                    "I can answer intermediate questions regarding the college.",
+                    "You can ask me questions related to the college, and I will try my best to answer them.",
+                    "I provide information about college details, admissions, dress code, facilities, and more.",
+                    "Feel free to ask about college rules, fees, campus facilities, and other related topics."
+                ]
+            },
+            {
+                "tag": "transport",
+                "patterns": [
+                    "pec transport", "pec college transport", "panimalar transport","transport details","transportion details",
+                    "panimalar engineering college transport", "panimalar college transport",
+                    "pec transportation", "pec college transportation", "panimalar transportation",
+                    "panimalar engineering college transportation", "panimalar college transportation",
+                    "transport", "college transport", "Panimalar transport", "what transport is available",
+                    "transport services", "college transport services", "transportation",
+                    "how to use transport to reach college", "how to reach PEC",
+                    "does PEC have bus service", "bus routes for PEC", "college bus details",
+                    "bus facilities in PEC", "do you have transport service",
+                    "is there college transport", "what are the bus timings",
+                    "how to use college transport", "does college provide buses",
+                    "bus stops for PEC", "is transport free", "transport facilities in college",
+                    "which areas does transport cover", "how far does the bus travel",
+                    "does college provide pickup service", "college vehicle service",
+                    "is there a bus for students", "transportation details",
+                    "campus transport service", "do staff get transport", "transport fees",
+                    "how much is transport cost", "bus timings and routes",
+                    "where are bus stops", "PEC travel options", "college pickup locations",
+                    "bus stop list", "travel facilities for students", "do you provide daily transport",
+                    "transport cost per year"
+                ],
+                "responses": [
+                    "Panimalar Engineering College offers bus transport services for students, covering various routes within the city and surrounding areas. The annual tuition fee for B.E. / B.Tech courses costs Rs. 50,000.",
+                    "Panimalar Engineering College offers transport services to students, with buses covering key routes in the city. The annual tuition fee is Rs. 50,000.",
+                    "PEC provides bus transportation for students across various city routes. You can get more details about bus timings and fees from the administration.",
+                    "Yes, Panimalar College offers bus transport services for students. The routes cover nearby areas, and the annual transport cost is Rs. 50,000.",
+                    "Students at Panimalar Engineering College can avail of bus services that cover the city’s key locations. The transport fee is Rs. 50,000 per year."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "scholarship",
+                "patterns": [
+                    "pec scholarship", "pec college scholarship", "panimalar scholarship","scholarship details",
+                    "panimalar engineering college scholarship", "panimalar college scholarship",
+                    "scholarship", "Is scholarship available", "scholarship engineering",
+                    "scholarship fe", "scholarship se", "scholarship te", "scholarship be",
+                    "available scholarships", "scholarship for computer engineering",
+                    "scholarship for automobile engineering", "scholarship for IT engineering",
+                    "scholarship for mechanical engineering", "scholarship for civil engineering",
+                    "scholarship for extc engineering", "scholarship for electrical engineering",
+                    "list of scholarship", "comps scholarship", "IT scholarship",
+                    "mechanical scholarship", "civil scholarship", "electrical scholarship",
+                    "extc scholarship", "automobile scholarship", "first year scholarship",
+                    "second year scholarship", "third year scholarship", "fourth year scholarship",
+                    "how to apply for a scholarship", "scholarship eligibility",
+                    "who can get a scholarship", "is there a merit-based scholarship",
+                    "what scholarships are available", "how to get a scholarship",
+                    "does PEC offer fee waivers", "scholarship application process",
+                    "is there a sports scholarship", "government scholarships in PEC",
+                    "scholarship for backward class students", "scholarship for SC/ST students",
+                    "scholarship for OBC students", "minority scholarship",
+                    "financial aid for students", "scholarship opportunities in PEC",
+                    "how much scholarship can I get", "is there 100% scholarship",
+                    "scholarship for girls", "scholarship for economically weak students",
+                    "does PEC provide financial aid", "scholarship for rank holders",
+                    "can I apply for multiple scholarships", "scholarship deadline",
+                    "when can I apply for a scholarship", "fee concession for students",
+                    "scholarship for tuition fees", "merit-cum-means scholarship"
+                ],
+                "responses": [
+                    "Panimalar Engineering College offers scholarships based on academic performance, sports achievements, and government schemes, including merit-based and community-based scholarships.",
+                    "PEC offers multiple scholarships based on academic excellence and sports achievements. Students from various communities can also apply for specific scholarships.",
+                    "Various scholarships are available at Panimalar Engineering College, including merit-based and government scholarships, for both undergraduate and postgraduate courses.",
+                    "Panimalar Engineering College provides scholarships based on academic performance and community-based criteria. You can apply through the PEC portal.",
+                    "PEC offers scholarships for both undergraduate and postgraduate students. These include merit-based and community-based opportunities."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "faculty",
+                "patterns": [
+                    "pec faculty", "pec college faculty", "panimalar faculty","faculty details",
+                    "panimalar engineering college faculty", "panimalar college faculty",
+                    "pec staff", "pec college staff", "panimalar staff",
+                    "panimalar engineering college staff", "panimalar college staff",
+                    "faculty list", "faculty details", "list of faculty", "faculty information",
+                    "tell me about faculty", "give faculty details", "how is the faculty",
+                    "please provide faculty details", "department-wise faculty", "faculty for CSE",
+                    "faculty for IT", "faculty for Mechanical", "faculty for Civil",
+                    "faculty for Electrical", "faculty for ECE", "faculty for Automobile",
+                    "faculty for first year", "faculty for second year", "faculty for third year",
+                    "faculty for fourth year", "who are the professors in PEC",
+                    "who are the HODs in PEC", "faculty qualification", "faculty experience",
+                    "faculty contact details"
+                ],
+                "responses": [
+                    "Which department's faculty list do you want?",
+                    "Please specify the department to get the faculty details.",
+                    "We have experienced faculty members in all departments. Which department’s faculty details would you like to know?",
+                    "Can you specify the department for which you need faculty details?",
+                    "Please tell me the department for faculty information."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "student portal",
+                "patterns": [
+                    "pec student portal", "pec college student portal", "panimalar student portal","student portal details",
+                    "panimalar engineering college student portal", "panimalar college student portal",
+                    "student portal", "give student portal link", "student portal?",
+                    "where is student portal", "how to access student portal", "PEC student portal",
+                    "how to get student portal", "where to get fees receipt",
+                    "please provide student portal link", "where to login",
+                    "how to check attendance", "how to check exam results",
+                    "how to check marks", "how to download hall ticket", "student login"
+                ],
+                "responses": [
+                    "Panimalar Engineering College has developed the IMS Portal for students to easily access their details and academic information. Link: https://panimalar.ac.in/",
+                    "You can access the PEC student portal via this link: https://panimalar.ac.in/ims-portal",
+                    "Visit the IMS Portal at https://panimalar.ac.in/ to access your student details and academic records.",
+                    "To access your student portal, visit https://panimalar.ac.in/ims-portal.",
+                    "For your student portal access, please visit https://panimalar.ac.in/ims-portal and log in with your credentials."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "sports",
+                "patterns": [
+                    "pec sports", "pec college sports", "panimalar sports","sports details","sports",
+                    "panimalar engineering college sports", "panimalar college sports",
+                    "sports activities at Panimalar Engineering College",
+                    "what sports are available at Panimalar Engineering College",
+                    "does Panimalar have sports facilities",
+                    "football, cricket, and other sports at Panimalar College",
+                    "Panimalar Engineering College sports facilities",
+                    "sports competitions at Panimalar Engineering College",
+                    "sports infrastructure at Panimalar",
+                    "athletics and games at Panimalar College",
+                    "basketball and volleyball facilities at Panimalar College",
+                    "what games are played at Panimalar College",
+                    "does PEC have a sports ground",
+                    "is there a gym at Panimalar College",
+                    "sports tournaments at PEC",
+                    "what sports events happen at PEC",
+                    "indoor games at Panimalar College"
+                ],
+                "responses": [
+                    "Panimalar Engineering College provides excellent sports facilities, including football, cricket, basketball, volleyball, badminton, and athletics. Students also participate in inter-college and state-level competitions.",
+                    "PEC has well-equipped outdoor and indoor sports facilities, supporting games like football, cricket, volleyball, basketball, chess, and athletics.",
+                    "Students at PEC have access to various sports facilities, including a dedicated ground for outdoor games and an indoor sports complex.",
+                    "Panimalar Engineering College offers a wide range of sports activities including football, cricket, basketball, volleyball, and athletics, with opportunities for competition.",
+                    "PEC features well-maintained sports infrastructure for both indoor and outdoor games like football, basketball, cricket, and athletics, with regular tournaments.",
+                    "At Panimalar Engineering College, students have access to various sports facilities, including a well-equipped gym and grounds for outdoor sports like football and cricket.",
+                    "The sports department at PEC organizes various sports competitions throughout the year, providing ample opportunities for students to showcase their talents."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "college_timings",
+                "patterns": [
+                    "pec college timings", "panimalar college timings", "what are the college hours at PEC","college timing details",
+                    "college working hours in panimalar", "when does Panimalar College start and end",
+                    "what time does PEC open", "what time does PEC close",
+                    "panimalar engineering college timings", "panimalar college start and end time",
+                    "pec morning and evening schedule", "college schedule at PEC",
+                    "panimalar college working hours", "college shift timings at Panimalar",
+                    "at what time does college start", "at what time does college end",
+                    "working schedule of panimalar engineering college"
+                ],
+                "responses": [
+                    "Panimalar Engineering College operates from 8:00 AM to 3:15 PM on all working days.",
+                    "The official college timings at PEC are from 8:00 AM to 3:15 PM.",
+                    "At Panimalar Engineering College, classes start at 8:00 AM and end at 3:15 PM.",
+                    "PEC operates from 8:00 AM to 3:15 PM. This is the regular schedule followed on all weekdays.",
+                    "The college starts at 8:00 AM and concludes by 3:15 PM at PEC.",
+                    "Panimalar Engineering College runs from 8:00 AM in the morning to 3:15 PM in the afternoon on all working days.",
+                    "Classes at PEC begin at 8:00 AM and conclude by 3:15 PM every day."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "rules and regulations",
+                "patterns": [
+                    "pec rules and regulations", "pec college rules and regulations","rules and regulations details",
+                    "panimalar rules and regulations", "panimalar engineering college rules and regulations",
+                    "panimalar college rules and regulations", "pec rules", "pec college rules",
+                    "rules and regulations", "panimalar rules", "panimalar engineering college rules",
+                    "panimalar college rules", "pec regulation", "pec college regulation",
+                    "panimalar regulation", "panimalar engineering college regulation",
+                    "panimalar college regulation", "rules", "regulation", "regulations",
+                    "college guidelines", "discipline rules", "campus rules", "hostel rules",
+                    "student rules", "rules for students", "academic regulations",
+                    "student discipline policy", "behavior policy", "college policies",
+                    "rules to follow", "rules in Panimalar College", "code of conduct in Panimalar College",
+                    "Panimalar discipline system", "general rules at Panimalar College",
+                    "attendance rules in college", "exam regulations in Panimalar",
+                    "college campus guidelines", "rules for hostel students",
+                    "student handbook policies", "Panimalar College dos and don’ts",
+                    "student behavior rules in college"
+                ],
+                "responses": [
+                    "1. Panimalar Engineering College operates from 8:00 a.m. to 3:15 p.m., and students must arrive before 8:00 a.m. while ensuring they do not leave before 3:15 p.m., with 170 buses departing the campus at 3:30 p.m. 2. The college enforces a strict formal dress code, requiring boys to wear formal shirts and trousers with shoes, while girls must wear salwar kameez or saree, and casual wear such as T-shirts and jeans is strictly prohibited. 3. Students must maintain regular attendance, follow the academic calendar and examination schedules, and engage in co-curricular activities. 4. Leave must be requested in advance and is subject to approval; unauthorized absence may result in disciplinary action, and medical leave requires a valid medical certificate. 5. Mobile phones are prohibited in classrooms and laboratories, and usage is restricted to designated areas. 6. Ragging is strictly prohibited, and students found guilty will face severe disciplinary action. 7. Students must carry their ID cards at all times and present them upon request. 8. The use of alcohol, drugs, or smoking is strictly prohibited on campus and in the hostel. 9. Students must respect faculty, staff, and fellow students and maintain discipline inside and outside the classroom. 10. Library rules must be followed, including maintaining silence, returning borrowed books on time, and adhering to digital resource guidelines. 11. Examination rules mandate strict adherence to seating arrangements, prohibition of malpractice, and timely submission of answer scripts. 12. Hostel students must follow curfew timings, and unauthorized outings without permission are not allowed. 13. Vehicles must be parked only in designated areas, and reckless driving inside the campus is not permitted. 14. Proper disposal of waste and maintaining cleanliness in classrooms, hostel rooms, and public areas is mandatory. 15. College Wi-Fi access is limited to academic use, and misuse for entertainment or unauthorized downloads is prohibited. 16. Students must actively participate in academic and co-curricular activities and adhere to faculty instructions. 17. Any form of harassment or misconduct, including online bullying, will result in disciplinary action. 18. Unauthorized political or religious gatherings inside the campus are not permitted. 19. Students must use laboratory equipment responsibly and report any damages immediately to the faculty in charge. 20. For further details, students can refer to the official Panimalar Engineering College rules and regulations document on the college website."
+                ],
+                "context_set": ""
+            },
+            {
+                "tag": "attendance",
+                "patterns": [
+                    "How much attendance do I need?", "Can I skip classes in PEC?", "What happens if I have low attendance?","attendance details",
+                    "How to check my attendance online?", "Is attendance strict in Panimalar?", "Can I get attendance for medical leave?",
+                    "Do I need 75% attendance for exams?", "How many leaves can I take?", "Will I be debarred for low attendance?",
+                    "Can I get attendance if I join late?", "Is attendance compulsory for all classes?", "How is attendance calculated?",
+                    "Can sports students get attendance?", "Do we have biometric attendance?", "Who manages attendance records?",
+                    "What if my attendance is wrongly marked?", "How to apply for attendance exemption?", "Will attendance affect my grades?",
+                    "attendance","attendance details",
+                    "Can I take leave for family events?", "Is there a way to increase attendance?","attendance in pec","attendance in panimalar","attendance in panimalar engineering college"
+                ],
+                "responses": [
+                    "Panimalar Engineering College requires students to maintain a minimum attendance percentage of 80% for exams. It is best to check with PEC for details.",
+                    "To attend exams at Panimalar Engineering College, you must maintain a minimum of 80% attendance. Check the guidelines for further details.",
+                    "Attendance is mandatory at PEC, and students are required to maintain 80% attendance for eligibility to appear in exams.",
+                    "PEC expects students to maintain a minimum attendance of 80%. Students falling below this limit may be debarred from writing exams."
+                ]
+            },
+            {
+                "tag": "exam",
+                "patterns": [
+                    "When are semester exams in PEC?", "examinations in pec","examinations in panimalar","examinations in panimalar engineering college","exams in pec","How to check the exam timetable?", "Do we have online exams?",
+                    "How to register for revaluation?", "What if I fail an exam?", "Can I write an exam with low attendance?","exams in panimalar","exams in panimalar engineering college",
+                    "Are grace marks available in PEC?", "What is the passing mark for exams?", "Where do I collect my hall ticket?","exam","exams","examinations","examination",
+                    "How to apply for re-exams?", "What is the PEC exam grading system?", "Can I use a calculator in exams?","examination details","exam details",
+                    "Are open book exams allowed?", "What is the punishment for cheating?", "Do we have internal marks?",
+                    "Can I apply for an exam late?", "Do lateral entry students have different exams?", "When do results get published?",
+                    "Can I retake an exam for a better score?", "How many attempts do I get for backlogs?"
+                ],
+                "responses": [
+                    "Examinations at Panimalar Engineering College follow strict guidelines. You can check your exam details through the student portal https://coe.panimalar.ac.in/coepec/.",
+                    "The exam timetable can be accessed on the student portal. You can also apply for revaluation through the same portal.",
+                    "PEC conducts exams as per the academic calendar. You can find the detailed exam schedule on the student portal.",
+                    "In case of backlogs, you can register for re-exams. Ensure that you meet the eligibility requirements for the re-exams."
+                ]
+            },
+            {
+                "tag": "library",
+                "patterns": [
+                    "How to borrow books from the library?","library","library in pec","Do I need a library card?", "How long can I keep a book?",
+                    "Can I renew library books?","library in panimalar","library in panimalar engineering college", "What are the library timings?", "Is there Wi-Fi in the library?",
+                    "Can I bring my own books?", "Is there a fine for late returns?", "How to reserve a book online?","library details",
+                    "Do we have a digital library?", "Are research papers available in the library?", "Can I take books home?",
+                    "Are there study rooms in the library?", "How many books can I borrow at a time?", "Do we need ID cards for library access?",
+                    "Can I read newspapers in the library?", "Are group discussions allowed in the library?", "Who is in charge of the library?",
+                    "Is there a photocopy service in the library?", "Where can I find previous year question papers?"
+                ],
+                "responses": [
+                    "The Panimalar Engineering College library provides book lending, digital resources, and study spaces. Visit the library for more details. The central library is located in the CSBS department.",
+                    "To borrow books from the PEC library, you need a valid library card. You can check out books for up to 15 days.",
+                    "Books can be renewed if no other students have reserved them. Visit the library counter or use the online system to renew books.",
+                    "The library is open from 9:00 AM to 6:00 PM on weekdays. On Saturdays, it is open until 2:00 PM."
+                ]
+            },
+            {
+                "tag": "placements",
+                "patterns": [
+                    "PEC placements", "placement details", "placement record of PEC", "highest package in PEC",
+                    "companies visiting PEC", "placement statistics", "placement process in PEC",
+                    "how to apply for placements", "placement eligibility criteria", "does PEC provide placement training",
+                    "placement opportunities in PEC", "placement support in PEC", "does PEC offer internships",
+                    "internship opportunities in PEC", "does PEC provide job assistance", "placement drive details",
+                    "placement season in PEC", "on-campus placements in PEC", "off-campus placements support",
+                    "job offers in PEC", "recruitment process in PEC", "who are the top recruiters in PEC",
+                    "which branch has best placements", "placement report of PEC", "does PEC have tie-ups with companies"
+                ],
+                "responses": [
+                    "Panimalar Engineering College has a strong placement record with top recruiters like **Zoho, HCL, Accenture, Infosys, and Tech Mahindra** hiring students every year.",
+                    "PEC provides excellent placement opportunities, with companies like **TCS, CTS, Hexaware, Capgemini, and Infosys** offering competitive packages to students.",
+                    "With placement training and industry tie-ups, PEC students get recruited by leading firms such as **Accenture, Zoho, HCL, Tech Mahindra, and Capgemini**.",
+                    "Panimalar College ensures high placement rates, with **TCS, CTS, Infosys, Hexaware, and Tech Mahindra** among the top hiring companies every year."
+                ],
+                "context_set": ""
+            }, 
+            {
+                "tag": "fest",
+                "patterns": [
+                    "pec fest", "pec college fest", "panimalar fest","fest details",
+                    "panimalar engineering college fest", "panimalar college fest",
+                    "pec culturals", "pec college culturals", "panimalar culturals",
+                    "panimalar engineering college culturals", "panimalar college culturals",
+                    "culturals", "fests", "college fest", "PEC fests",
+                    "information fest", "please provide fests information",
+                    "tell me about college fests", "give me fests details", "fests?",
+                    "cultural programs at PEC", "technical events at PEC",
+                    "what events happen in Panimalar Engineering College?",
+                    "list of fests in Panimalar", "does PEC have cultural events?",
+                    "when is the next PEC fest?", "upcoming fests at Panimalar Engineering College",
+                    "annual fests at Panimalar College", "intercollege fests at PEC",
+                    "tech fest at Panimalar College", "does Panimalar College have a fest?",
+                    "fest dates for PEC", "college day events at PEC",
+                    "does PEC conduct symposiums?", "hackathons at PEC",
+                    "Panimalar technical symposiums", "Intelliconz event details",
+                    "Xerone 2025 fest info", "fest registrations at PEC"
+                ],
+                "responses": [
+                    "Panimalar Engineering College hosts various cultural and technical events like College Day, Hostel Day, symposiums, and hackathons such as Intelliconz 2k25 and Xerone 2025, fostering student engagement and innovation.",
+                    "PEC organizes vibrant fests featuring cultural performances, competitions, guest talks by industry leaders, and inter-collegiate tech fests where students can showcase their technical skills.",
+                    "The annual college fest at PEC includes dance, music, drama, fine arts competitions, business idea contests, gaming tournaments, and entrepreneurship challenges.",
+                    "PEC also conducts symposiums, hackathons, and other technical events like Intelliconz and Xerone, providing a platform for students to showcase their talents and innovations."
+                ]
+            }            
+        ]
+    }
+
+    

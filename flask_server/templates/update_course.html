@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Course</title>
+    
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        .form-label {
+            font-weight: 600;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            text-decoration: none;
+            font-weight: 500;
+            color: #1979fa;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h3 class="text-center mb-3">Update Course</h3>
+        <form action="{{ url_for('update_course', course_id=course.course_id) }}" method="post" enctype="multipart/form-data">
+            
+            <!-- Course Name -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Course Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ course.name }}" required>
+            </div>
+
+            <!-- Course Duration -->
+            <div class="mb-3">
+                <label for="duration" class="form-label">Course Duration</label>
+                <input type="text" class="form-control" id="duration" name="duration" value="{{ course.duration }}" required>
+            </div>
+
+            <!-- Syllabus File Upload -->
+            <div class="mb-3">
+                <label for="syllabus" class="form-label">Upload New Syllabus (PDF only)</label>
+                <input type="file" class="form-control" id="syllabus" name="syllabus" accept=".pdf">
+                {% if course.syllabus %}
+                    <p class="mt-2"><strong>Current Syllabus:</strong> 
+                        <a href="{{ url_for('download_syllabus', course_id=course.course_id) }}" target="_blank">Download</a>
+                    </p>
+                {% endif %}
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Update Course</button>
+        </form>
+
+        <!-- Back Link -->
+        <a href="{{ url_for('courses') }}" class="back-link">← Back to Courses</a>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

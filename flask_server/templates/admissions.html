@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 40px;
+        }
+        h2 {
+            color: #333;
+        }
+        .table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-view {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Admissions Management</h2>
+    
+    <!-- Search & Filter -->
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search by Name or Course">
+        </div>
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for admission in admissions %}
+            <tr>
+                <td>{{ admission.id }}</td>
+                <td>{{ admission.full_name }}</td>
+                <td>{{ admission.email }}</td>
+                <td>{{ admission.phone }}</td>
+                <td>{{ admission.course_name }}</td>
+                <td>
+                    <a href="{{ url_for('view_admission_detail', id=admission.id) }}" class="btn btn-sm btn-view">View Details</a>
+                    <form action="{{ url_for('delete_admission', id=admission.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this admission?');">
+                        <button type="submit" class="btn btn-sm btn-delete">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="6" class="text-center text-danger">No admissions found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Bootstrap JS (for modal confirmations) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Search Filter Script -->
+<script>
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+        let filter = this.value.toLowerCase();
+        let rows = document.querySelectorAll("tbody tr");
+
+        rows.forEach(row => {
+            let name = row.cells[1].textContent.toLowerCase();
+            let course = row.cells[4].textContent.toLowerCase();
+            row.style.display = (name.includes(filter) || course.includes(filter)) ? "" : "none";
+        });
+    });
+</script>
+
+</body>
+</html>

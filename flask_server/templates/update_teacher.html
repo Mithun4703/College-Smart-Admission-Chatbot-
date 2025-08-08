@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Teacher</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #1979fa;
+            margin-bottom: 1em;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #1979fa;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1em;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #1565c0;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 1em;
+            color: #1979fa;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Edit Teacher</h1>
+        <form action="{{ url_for('update_teacher', id=teacher.id) }}" method="POST">
+            <label for="firstname">First Name</label>
+            <input type="text" name="first_name" value="{{ teacher.first_name }}" required>
+
+            <label for="designation">Designation</label>
+            <input type="text" name="last_name" value="{{ teacher.last_name }}" required>
+
+            <label for="department">Department</label>
+            <input type="text" name="department" value="{{ teacher.department }}" required>
+
+            <button type="submit">Update Teacher</button>
+        </form>
+
+        <a class="back-link" href="{{ url_for('teachers') }}">← Back to Teachers</a>
+    </div>
+
+</body>
+</html>

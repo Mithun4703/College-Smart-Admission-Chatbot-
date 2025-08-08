@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panimalar Engineering College - Admission Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 700px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2>Panimalar Engineering College - Admission Form</h2>
+        <form action="/submit-admission" method="POST" enctype="multipart/form-data">
+            
+            <!-- 1️⃣ Basic Information -->
+            <h5 class="text-primary mt-4">1️⃣ Basic Information</h5>
+            <div class="mb-3">
+                <label>Full Name</label>
+                <input type="text" name="full_name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Date of Birth</label>
+                <input type="date" name="dob" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Gender</label>
+                <select name="gender" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Phone Number</label>
+                <input type="text" name="phone" class="form-control" required>
+            </div>
+
+            <!-- 2️⃣ Address Details -->
+            <h5 class="text-primary mt-4">2️⃣ Address Details</h5>
+            <div class="mb-3">
+                <label>Permanent Address</label>
+                <textarea name="permanent_address" class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label>Current Address</label>
+                <textarea name="current_address" class="form-control"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label>City</label>
+                    <input type="text" name="city" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label>State</label>
+                    <input type="text" name="state" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label>Pincode</label>
+                    <input type="text" name="pincode" class="form-control" required>
+                </div>
+            </div>
+
+            <!-- 3️⃣ Academic Information -->
+            <h5 class="text-primary mt-4">3️⃣ Academic Information</h5>
+            <div class="mb-3">
+                <label>Last Completed Qualification</label>
+                <input type="text" name="qualification" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Percentage / CGPA</label>
+                <input type="text" name="cgpa" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>School/College Name</label>
+                <input type="text" name="school_college" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Board/University</label>
+                <input type="text" name="board_university" class="form-control" required>
+            </div>
+
+            <!-- 4️⃣ Course Selection -->
+            <h5 class="text-primary mt-4">4️⃣ Course Selection</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Preferred Course</label>
+                <select name="course_id" class="form-control" required>
+                    <option value="">-- Select a Course --</option>
+                    {% for course in courses %}
+                    <option value="{{ course.course_id }}">{{ course.name }}</option>
+                    {% endfor %}
+                </select>
+                </div>
+                <div class="col-md-6">
+                    <label>Mode of Study</label>
+                    <select name="mode" class="form-control" required>
+                        <option value="Regular">Regular</option>
+                        <option value="Distance Learning">Distance Learning</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 5️⃣ Documents Upload -->
+            <h5 class="text-primary mt-4">5️⃣ Documents Upload</h5>
+            <div class="mb-3">
+                <label>12th Marksheet / Diploma Certificate</label>
+                <input type="file" name="marksheet" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Aadhaar / ID Proof</label>
+                <input type="file" name="id_proof" class="form-control">
+            </div>
+
+            <!-- 6️⃣ Parent/Guardian Details -->
+            <h5 class="text-primary mt-4">6️⃣ Parent/Guardian Details</h5>
+            <div class="mb-3">
+                <label>Father's Name</label>
+                <input type="text" name="father_name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Mother's Name</label>
+                <input type="text" name="mother_name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label>Guardian's Contact Number</label>
+                <input type="text" name="guardian_contact" class="form-control">
+            </div>
+
+            <!-- 7️⃣ Rules and Regulations -->
+<h5 class="text-primary mt-4">7️⃣ Rules and Regulations</h5>
+<ul>
+    <li>Admission is granted based on merit and eligibility criteria set by the college.</li>
+    <li>Students must submit original documents at the time of admission for verification.</li>
+    <li>Attendance of at least 75% is mandatory for appearing in examinations.</li>
+    <li>Students must adhere to the college dress code and discipline guidelines.</li>
+    <li>Ragging is strictly prohibited on campus, and violators will face legal action.</li>
+    <li>Fees once paid are non-refundable except in cases as per college policy.</li>
+    <li>Use of mobile phones inside classrooms is strictly restricted.</li>
+    <li>Students must abide by all rules and regulations prescribed by the college.</li>
+</ul>
+
+<!-- 8️⃣ Declaration -->
+<div class="form-check mt-3">
+    <input type="checkbox" class="form-check-input" required>
+    <label class="form-check-label">I have read and agree to the college rules and regulations.</label>
+</div>
+
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn mt-3">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
